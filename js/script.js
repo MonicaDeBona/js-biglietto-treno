@@ -16,7 +16,7 @@ const ticketSeniorDiscount = (40 / 100 * ticketPrice);
 // if (userAge < 18) {
 //     document.getElementById ("output").innerHTML = (ticketPrice - ticketMinorDiscount).toFixed(2) + "&euro;";
 // } else if (userAge > 64) {
-//     document.getElementById ("output").innerHTML = (ticketPrice.toFixed(2) - ticketSeniorDiscount).toFixed(2) + "&euro;";
+//     document.getElementById ("output").innerHTML = (ticketPrice - ticketSeniorDiscount).toFixed(2) + "&euro;";
 // } else {
 //     document.getElementById ("output").innerHTML = ticketPrice.toFixed(2) + "&euro;";
 // }
@@ -25,13 +25,13 @@ const ticketSeniorDiscount = (40 / 100 * ticketPrice);
 let price;
 
 if (userAge < 18) {
-    price = (ticketPrice - ticketMinorDiscount).toFixed(2);
+    price = ticketPrice - ticketMinorDiscount;
 } else if (userAge > 64) {
-    price = (ticketPrice.toFixed(2) - ticketSeniorDiscount).toFixed(2);
+    price = ticketPrice - ticketSeniorDiscount;
 } else {
-    price = ticketPrice.toFixed(2);
+    price = ticketPrice;
 }
 
-document.getElementById ("output").innerHTML = price + "&euro;";
+document.getElementById ("output").innerHTML = price.toFixed(2) + "&euro;";
 
 
