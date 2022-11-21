@@ -13,11 +13,25 @@ const ticketSeniorDiscount = (40 / 100 * ticketPrice);
 
 
 
+// if (userAge < 18) {
+//     document.getElementById ("output").innerHTML = (ticketPrice - ticketMinorDiscount).toFixed(2) + "&euro;";
+// } else if (userAge > 64) {
+//     document.getElementById ("output").innerHTML = (ticketPrice.toFixed(2) - ticketSeniorDiscount).toFixed(2) + "&euro;";
+// } else {
+//     document.getElementById ("output").innerHTML = ticketPrice.toFixed(2) + "&euro;";
+// }
+
+
+let price;
+
 if (userAge < 18) {
-    document.getElementById ("output").innerHTML = (ticketPrice - ticketMinorDiscount).toFixed(2) + "&euro;";
+    price = (ticketPrice - ticketMinorDiscount).toFixed(2);
 } else if (userAge > 64) {
-    document.getElementById ("output").innerHTML = (ticketPrice.toFixed(2) - ticketSeniorDiscount).toFixed(2) + "&euro;";
+    price = (ticketPrice.toFixed(2) - ticketSeniorDiscount).toFixed(2);
 } else {
-    document.getElementById ("output").innerHTML = ticketPrice.toFixed(2) + "&euro;";
+    price = ticketPrice.toFixed(2);
 }
+
+document.getElementById ("output").innerHTML = price + "&euro;";
+
 
